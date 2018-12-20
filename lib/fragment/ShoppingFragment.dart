@@ -17,7 +17,21 @@ class _ShoppingFragment extends State<ShoppingFragment>{
     return new Scaffold(
       backgroundColor: Colors.white,
       appBar: _toolBarAPPBar(),
-      body: _shoppingList(),
+      body: new Column(
+        children: <Widget>[
+          new Expanded(child: new Container(
+            child: new ListView(
+              children: <Widget>[
+                _shoppingList(),
+                _shoppingList(),
+                _shoppingList(),
+              ],
+            ),
+          ),),
+          OftenView.line_One(),
+          _balance(),
+        ],
+      ),
     );
   }
 
@@ -43,14 +57,14 @@ class _ShoppingFragment extends State<ShoppingFragment>{
   Widget _shoppingList(){
     return new Container(
       color: Color(0xffF1F1F1),
-      child: new ListView(
+      child: new Column(
         children: <Widget>[
           _vendingMachineTitle(),
 
           //_vendingMachineShoppingList(),
           //不设置高度（405）就不显示
           new Container(
-            height: 810.0,
+            height: 525.0,
             child: new ListView(
               physics: new NeverScrollableScrollPhysics(),
               children: <Widget>[
@@ -218,6 +232,39 @@ class _ShoppingFragment extends State<ShoppingFragment>{
         ),),
 
       ],
+    );
+  }
+
+  /*
+   * 结算
+   */
+  Widget _balance(){
+    return new Container(
+      padding: EdgeInsets.only(left: 10.0,right: 10.0,),
+      height: 48.0,
+      child: new Row(
+        children: <Widget>[
+          
+          new Expanded(child: new Text('共计：￥188.00',
+            style: TextStyle(
+                fontSize: 16.0,
+                color: Color(0xff222222),
+            ),
+          ),),
+
+          new RaisedButton(
+            color: Color(0xffF6B13E),
+            onPressed: (){
+
+            },
+            child: new Text(
+              "结算",
+              style: TextStyle(fontSize: 14.0,
+              color: Color(0xffffffff),),
+            ),
+          )
+        ],
+      ),
     );
   }
 

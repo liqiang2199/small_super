@@ -49,6 +49,10 @@ flutter:
      - images/icon_shop_minus.png
      - images/icon_shop_add.png
      - images/icon_delete.png
+     - images/icon_integral.png
+     - images/icon_me_order.png
+     - images/icon_suggestion.png
+     - images/icon_customer.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

@@ -5,6 +5,8 @@ import 'package:small_super/fragment/MeFragment.dart';
 import 'package:small_super/fragment/ShoppingFragment.dart';
 import 'package:small_super/value/string.dart';
 
+import 'package:small_super/activity/OrderController.dart';
+
 /*
  * if (Platform.isAndroid) {
     // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前MaterialApp组件会覆盖掉这个值。
@@ -26,6 +28,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(),
+      routes: {
+        "meOrder":(BuildContext context)=>new OrderController(),
+      },
     );
   }
 }

@@ -39,4 +39,21 @@ class OftenView{
     );
   }
 
+  /*
+   * 1dp 的直线
+   */
+  static Widget line_One(){
+    return new Container(
+      height: 1.0,
+      color: Color(0xffF1F1F1),
+    );
+  }
+
+  static Widget line(double d){
+    return new Container(
+      height: d,
+      color: Color(0xffF1F1F1),
+    );
+  }
+
 }
