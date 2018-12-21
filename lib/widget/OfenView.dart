@@ -25,6 +25,12 @@ class OftenView{
     );
   }
 
+  static Widget oftenRightPadding(double v){
+    return new Container(
+      padding: new EdgeInsets.only(right: v),
+    );
+  }
+
   static Widget oftenTopPadding(double v){
     return new Container(
       padding: new EdgeInsets.only(top:v,),

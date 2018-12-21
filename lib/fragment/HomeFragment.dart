@@ -41,7 +41,7 @@ class _HomeFragment extends State<HomeFragment>{
           //_shop(),
           OftenView.oftenTopPadding(20.0),
           new Container(
-            height: 960.0,
+            height: 900.0,
             child: _shopGrid(),
           ),
           //new Expanded(child: _shopGrid(),flex: 1,)
@@ -194,25 +194,32 @@ class _HomeFragment extends State<HomeFragment>{
   }
   Widget _shops(){
     return new Container(
-      height: 200.0,
       child: new Material(
         elevation: 2.0,
         borderRadius: BorderRadius.all(new Radius.circular(8.0)),
-        child: new Center(
-          child: _shop(),
-        ),
+        child: _shop(),
       ),
     );
   }
+
+//  Widget _shops(){
+//    return new Container(
+//      color: Colors.blue,
+//      height: 300.0,
+//      child: new Text("ddd",style: TextStyle(color: Colors.red),),
+//    );
+//  }
+
   /*
    * 商品展示
    */
   Widget _shop(){
     return new Center(
       child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
 
-          new Container(
+          new Expanded(child: new Container(
             margin: EdgeInsets.only(left: 5.0,right: 5.0,top: 0.0,bottom: 0.0),
             child: new Column(
               children: <Widget>[
@@ -224,6 +231,7 @@ class _HomeFragment extends State<HomeFragment>{
                 new Text("冰冻猪肉五公斤散装,特别好吃无敌，超高校级...",
                   textAlign: TextAlign.center,
                   maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: new TextStyle(
                     fontSize: 14,
                     color: Color(0xff222222),
@@ -231,7 +239,7 @@ class _HomeFragment extends State<HomeFragment>{
                 ),
               ],
             ),
-          ),
+          ),),
           new Container(
             margin: EdgeInsets.only(left: 5.0,right: 5.0,),
             height: 56.0,

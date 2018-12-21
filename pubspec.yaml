@@ -36,9 +36,13 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
      - images/icon_classify.png
+     - images/icon_classify_n.png
      - images/icon_home.png
+     - images/icon_home_n.png
      - images/icon_me.png
+     - images/icon_me_n.png
      - images/icon_shopping.png
+     - images/icon_shopping_n.png
      - images/icon_background.jpg
      - images/icon_discount.png
      - images/icon_more.png

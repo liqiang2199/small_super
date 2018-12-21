@@ -78,19 +78,19 @@ class _MyHomePageState extends State<MyHomePage> {
     //创建管理图片得二位数组
     _tabImages = [
       [
+        _getImageAssets("images/icon_home_n.png"),
         _getImageAssets("images/icon_home.png"),
-        _getImageAssets("images/icon_home.png"),
       ],
       [
+        _getImageAssets("images/icon_classify_n.png"),
         _getImageAssets("images/icon_classify.png"),
-        _getImageAssets("images/icon_classify.png"),
       ],
       [
-        _getImageAssets("images/icon_shopping.png"),
+        _getImageAssets("images/icon_shopping_n.png"),
         _getImageAssets("images/icon_shopping.png"),
       ],
       [
-        _getImageAssets("images/icon_me.png"),
+        _getImageAssets("images/icon_me_n.png"),
         _getImageAssets("images/icon_me.png"),
       ]
     ];
