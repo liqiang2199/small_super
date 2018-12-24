@@ -11,11 +11,12 @@ class HomeFragment extends StatefulWidget {
 }
 class _HomeFragment extends State<HomeFragment>{
 
-
+  static BuildContext _buildContext;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    _buildContext = context;
     return new Scaffold(
       backgroundColor: Colors.white,
       appBar: _toolBarAPPBar(),
@@ -87,7 +88,17 @@ class _HomeFragment extends State<HomeFragment>{
 
         new Expanded(child: buttonColumn("images/icon_discount.png", ValueString.publicWelfareDonationTitle),flex: 1,),
         new Expanded(child: buttonColumn("images/icon_processdonation.png", ValueString.preferentialActivitiesTitle),flex: 1,),
-        new Expanded(child: buttonColumn("images/icon_nearbymachine.png", ValueString.nearbyMachineTitle),flex: 1,),
+        new Expanded(
+          child:new GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(_buildContext, "vendingController");
+            },
+            child:  buttonColumn("images/icon_nearbymachine.png",
+                ValueString.nearbyMachineTitle
+            ),
+          ),
+          flex: 1,
+        ),
         new Expanded(child: buttonColumn("images/icon_more.png", ValueString.moreTitle),flex: 1,),
 
       ],

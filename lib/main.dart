@@ -6,6 +6,7 @@ import 'package:small_super/fragment/ShoppingFragment.dart';
 import 'package:small_super/value/string.dart';
 
 import 'package:small_super/activity/OrderController.dart';
+import 'package:small_super/activity/VendingMachineController.dart';
 
 /*
  * if (Platform.isAndroid) {
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       home: new MyHomePage(),
       routes: {
         "meOrder":(BuildContext context)=>new OrderController(),
+        "vendingController":(BuildContext context)=>new VendingMachineController(),
       },
     );
   }
